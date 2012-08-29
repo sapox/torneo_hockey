@@ -1,0 +1,31 @@
+<h1>Listing equipos</h1>
+
+<table>
+  <tr>
+    <th>Sexo</th>
+    <th>Categoria</th>
+    <th>Cantidad de victorias</th>
+    <th>Cantidad de derrotas</th>
+    <th>Cantidad de empates</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @equipos.each do |equipo| %>
+  <tr>
+    <td><%= equipo.sexo %></td>
+    <td><%= equipo.categoria %></td>
+    <td><%= equipo.cantidad_de_victorias %></td>
+    <td><%= equipo.cantidad_de_derrotas %></td>
+    <td><%= equipo.cantidad_de_empates %></td>
+    <td><%= link_to 'Show', equipo %></td>
+    <td><%= link_to 'Edit', edit_equipo_path(equipo) %></td>
+    <td><%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Equipo', new_equipo_path %>

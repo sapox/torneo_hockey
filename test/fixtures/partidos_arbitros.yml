@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  partido_id: 1
+  arbitro_id: 1
+  dni: MyString
+
+two:
+  partido_id: 1
+  arbitro_id: 1
+  dni: MyString

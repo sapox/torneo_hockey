@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  partido_id: 1
+  equipo_id: 1
+  cantidad_de_goles: 1
+
+two:
+  partido_id: 1
+  equipo_id: 1
+  cantidad_de_goles: 1

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @cancha.nombre %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @cancha.pais %>
+</p>
+
+<p>
+  <b>Provincia:</b>
+  <%= @cancha.provincia %>
+</p>
+
+<p>
+  <b>Ciudad:</b>
+  <%= @cancha.ciudad %>
+</p>
+
+<p>
+  <b>Calle y numero:</b>
+  <%= @cancha.calle_y_numero %>
+</p>
+
+<p>
+  <b>Capacidad publico:</b>
+  <%= @cancha.capacidad_publico %>
+</p>
+
+
+<%= link_to 'Edit', edit_cancha_path(@cancha) %> |
+<%= link_to 'Back', canchas_path %>

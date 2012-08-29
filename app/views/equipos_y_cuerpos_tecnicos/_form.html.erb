@@ -1,0 +1,29 @@
+<%= form_for(@equipo_y_cuerpo_tecnico) do |f| %>
+  <% if @equipo_y_cuerpo_tecnico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@equipo_y_cuerpo_tecnico.errors.count, "error") %> prohibited this equipo_y_cuerpo_tecnico from being saved:</h2>
+
+      <ul>
+      <% @equipo_y_cuerpo_tecnico.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo_club_id %><br />
+    <%= f.number_field :codigo_club_id %>
+  </div>
+  <div class="field">
+    <%= f.label :empleado_del_cuerpo_tecnico_id %><br />
+    <%= f.number_field :empleado_del_cuerpo_tecnico_id %>
+  </div>
+  <div class="field">
+    <%= f.label :puesto %><br />
+    <%= f.text_field :puesto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

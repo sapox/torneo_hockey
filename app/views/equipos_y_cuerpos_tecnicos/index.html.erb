@@ -1,0 +1,27 @@
+<h1>Listing equipos_y_cuerpos_tecnicos</h1>
+
+<table>
+  <tr>
+    <th>Codigo club</th>
+    <th>Empleado del cuerpo tecnico</th>
+    <th>Puesto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @equipos_y_cuerpos_tecnicos.each do |equipo_y_cuerpo_tecnico| %>
+  <tr>
+    <td><%= equipo_y_cuerpo_tecnico.codigo_club_id %></td>
+    <td><%= equipo_y_cuerpo_tecnico.empleado_del_cuerpo_tecnico_id %></td>
+    <td><%= equipo_y_cuerpo_tecnico.puesto %></td>
+    <td><%= link_to 'Show', equipo_y_cuerpo_tecnico %></td>
+    <td><%= link_to 'Edit', edit_equipo_y_cuerpo_tecnico_path(equipo_y_cuerpo_tecnico) %></td>
+    <td><%= link_to 'Destroy', equipo_y_cuerpo_tecnico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Equipo y cuerpo tecnico', new_equipo_y_cuerpo_tecnico_path %>

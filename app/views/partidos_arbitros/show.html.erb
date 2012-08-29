@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Partido:</b>
+  <%= @partido_arbitro.partido_id %>
+</p>
+
+<p>
+  <b>Arbitro:</b>
+  <%= @partido_arbitro.arbitro_id %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @partido_arbitro.dni %>
+</p>
+
+
+<%= link_to 'Edit', edit_partido_arbitro_path(@partido_arbitro) %> |
+<%= link_to 'Back', partidos_arbitros_path %>

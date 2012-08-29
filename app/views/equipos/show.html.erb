@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sexo:</b>
+  <%= @equipo.sexo %>
+</p>
+
+<p>
+  <b>Categoria:</b>
+  <%= @equipo.categoria %>
+</p>
+
+<p>
+  <b>Cantidad de victorias:</b>
+  <%= @equipo.cantidad_de_victorias %>
+</p>
+
+<p>
+  <b>Cantidad de derrotas:</b>
+  <%= @equipo.cantidad_de_derrotas %>
+</p>
+
+<p>
+  <b>Cantidad de empates:</b>
+  <%= @equipo.cantidad_de_empates %>
+</p>
+
+
+<%= link_to 'Edit', edit_equipo_path(@equipo) %> |
+<%= link_to 'Back', equipos_path %>

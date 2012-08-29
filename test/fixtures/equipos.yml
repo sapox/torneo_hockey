@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sexo: MyString
+  categoria: MyString
+  cantidad_de_victorias: 1
+  cantidad_de_derrotas: 1
+  cantidad_de_empates: 1
+
+two:
+  sexo: MyString
+  categoria: MyString
+  cantidad_de_victorias: 1
+  cantidad_de_derrotas: 1
+  cantidad_de_empates: 1

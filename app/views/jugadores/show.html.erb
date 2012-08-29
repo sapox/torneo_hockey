@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo club:</b>
+  <%= @jugador.codigo_club_id %>
+</p>
+
+<p>
+  <b>Equipo:</b>
+  <%= @jugador.equipo_id %>
+</p>
+
+<p>
+  <b>Apellido:</b>
+  <%= @jugador.apellido %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @jugador.nombre %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @jugador.dni %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @jugador.direccion %>
+</p>
+
+<p>
+  <b>Fecha nacimiento:</b>
+  <%= @jugador.fecha_nacimiento %>
+</p>
+
+<p>
+  <b>Puesto:</b>
+  <%= @jugador.puesto %>
+</p>
+
+<p>
+  <b>Telefono fijo:</b>
+  <%= @jugador.telefono_fijo %>
+</p>
+
+<p>
+  <b>Telefono celular:</b>
+  <%= @jugador.telefono_celular %>
+</p>
+
+<p>
+  <b>Provincia:</b>
+  <%= @jugador.provincia %>
+</p>
+
+<p>
+  <b>Ciudad:</b>
+  <%= @jugador.ciudad %>
+</p>
+
+<p>
+  <b>Sexo:</b>
+  <%= @jugador.sexo %>
+</p>
+
+
+<%= link_to 'Edit', edit_jugador_path(@jugador) %> |
+<%= link_to 'Back', jugadores_path %>

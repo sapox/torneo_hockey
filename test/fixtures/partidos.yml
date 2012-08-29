@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cancha_id: 1
+  fecha: 2012-08-24
+  fecha_encuentro: 2012-08-24 00:28:39
+
+two:
+  cancha_id: 1
+  fecha: 2012-08-24
+  fecha_encuentro: 2012-08-24 00:28:39

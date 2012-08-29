@@ -1,0 +1,2 @@
+module EquiposYCuerposTecnicosHelper
+end

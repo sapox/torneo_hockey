@@ -1,0 +1,2 @@
+module EmpleadosDelCuerpoTecnicoHelper
+end

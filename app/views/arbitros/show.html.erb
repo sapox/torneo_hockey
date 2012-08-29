@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @arbitro.nombre %>
+</p>
+
+<p>
+  <b>Apellido:</b>
+  <%= @arbitro.apellido %>
+</p>
+
+<p>
+  <b>Dni:</b>
+  <%= @arbitro.dni %>
+</p>
+
+<p>
+  <b>Fecha de nacimiento:</b>
+  <%= @arbitro.fecha_de_nacimiento %>
+</p>
+
+<p>
+  <b>Telefono fijo:</b>
+  <%= @arbitro.telefono_fijo %>
+</p>
+
+<p>
+  <b>Telefono celular:</b>
+  <%= @arbitro.telefono_celular %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @arbitro.email %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @arbitro.direccion %>
+</p>
+
+
+<%= link_to 'Edit', edit_arbitro_path(@arbitro) %> |
+<%= link_to 'Back', arbitros_path %>

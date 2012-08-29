@@ -1,0 +1,41 @@
+<%= form_for(@cancha) do |f| %>
+  <% if @cancha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cancha.errors.count, "error") %> prohibited this cancha from being saved:</h2>
+
+      <ul>
+      <% @cancha.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :pais %><br />
+    <%= f.text_field :pais %>
+  </div>
+  <div class="field">
+    <%= f.label :provincia %><br />
+    <%= f.text_field :provincia %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br />
+    <%= f.text_field :ciudad %>
+  </div>
+  <div class="field">
+    <%= f.label :calle_y_numero %><br />
+    <%= f.text_field :calle_y_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :capacidad_publico %><br />
+    <%= f.number_field :capacidad_publico %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

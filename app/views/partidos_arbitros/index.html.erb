@@ -1,0 +1,27 @@
+<h1>Listing partidos_arbitros</h1>
+
+<table>
+  <tr>
+    <th>Partido</th>
+    <th>Arbitro</th>
+    <th>Dni</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @partidos_arbitros.each do |partido_arbitro| %>
+  <tr>
+    <td><%= partido_arbitro.partido_id %></td>
+    <td><%= partido_arbitro.arbitro_id %></td>
+    <td><%= partido_arbitro.dni %></td>
+    <td><%= link_to 'Show', partido_arbitro %></td>
+    <td><%= link_to 'Edit', edit_partido_arbitro_path(partido_arbitro) %></td>
+    <td><%= link_to 'Destroy', partido_arbitro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Partido arbitro', new_partido_arbitro_path %>

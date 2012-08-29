@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo club:</b>
+  <%= @equipo_y_cuerpo_tecnico.codigo_club_id %>
+</p>
+
+<p>
+  <b>Empleado del cuerpo tecnico:</b>
+  <%= @equipo_y_cuerpo_tecnico.empleado_del_cuerpo_tecnico_id %>
+</p>
+
+<p>
+  <b>Puesto:</b>
+  <%= @equipo_y_cuerpo_tecnico.puesto %>
+</p>
+
+
+<%= link_to 'Edit', edit_equipo_y_cuerpo_tecnico_path(@equipo_y_cuerpo_tecnico) %> |
+<%= link_to 'Back', equipos_y_cuerpos_tecnicos_path %>

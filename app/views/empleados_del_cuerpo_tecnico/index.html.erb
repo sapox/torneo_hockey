@@ -1,0 +1,37 @@
+<h1>Listing empleados_del_cuerpo_tecnico</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Dni</th>
+    <th>Fecha de nacimiento</th>
+    <th>Telefono fijo</th>
+    <th>Telefono celular</th>
+    <th>Email</th>
+    <th>Direccion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @empleados_del_cuerpo_tecnico.each do |empleado_del_cuerpo_tecnico| %>
+  <tr>
+    <td><%= empleado_del_cuerpo_tecnico.nombre %></td>
+    <td><%= empleado_del_cuerpo_tecnico.apellido %></td>
+    <td><%= empleado_del_cuerpo_tecnico.dni %></td>
+    <td><%= empleado_del_cuerpo_tecnico.fecha_de_nacimiento %></td>
+    <td><%= empleado_del_cuerpo_tecnico.telefono_fijo %></td>
+    <td><%= empleado_del_cuerpo_tecnico.telefono_celular %></td>
+    <td><%= empleado_del_cuerpo_tecnico.email %></td>
+    <td><%= empleado_del_cuerpo_tecnico.direccion %></td>
+    <td><%= link_to 'Show', empleado_del_cuerpo_tecnico %></td>
+    <td><%= link_to 'Edit', edit_empleado_del_cuerpo_tecnico_path(empleado_del_cuerpo_tecnico) %></td>
+    <td><%= link_to 'Destroy', empleado_del_cuerpo_tecnico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Empleado del cuerpo tecnico', new_empleado_del_cuerpo_tecnico_path %>

@@ -1,0 +1,2 @@
+module EquipoPartidosHelper
+end

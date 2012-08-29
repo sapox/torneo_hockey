@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo_club_id: 1
+  empleado_del_cuerpo_tecnico_id: 1
+  puesto: MyString
+
+two:
+  codigo_club_id: 1
+  empleado_del_cuerpo_tecnico_id: 1
+  puesto: MyString
