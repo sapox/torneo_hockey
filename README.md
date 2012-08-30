@@ -1,5 +1,5 @@
 torneo_hockey
 =============
 
-aplicación tarea de la facu Diego
+aplicación tarea de la facu.
 =============
