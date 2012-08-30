@@ -11,11 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :cancha_id %><br />
-    <%= f.number_field :cancha_id %>
-  </div>
+  <!--<div class="field">
+    <%#= f.label :cancha_id %><br />
+    <%#= f.number_field :cancha_id %>
+  </div> -->
   <div>
+  	<br>Seleccione cancha</br>
     <%= f.collection_select(:cancha_id, @canchas, :id, :nombre) %>
   </div>
   <div class="field">

@@ -13,11 +13,12 @@
 
   <div class="field">
     <%= f.label :codigo_club_id %><br />
-    <%= f.number_field :codigo_club_id %>
+    <%= f.collection_select(:codigo_club_id, @clubes, :id, :nombre) %>
+    
   </div>
   <div class="field">
     <%= f.label :equipo_id %><br />
-    <%= f.number_field :equipo_id %>
+    <%= f.collection_select(:equipo_id, @equipos, :id, :nombre) %>
   </div>
   <div class="field">
     <%= f.label :apellido %><br />
@@ -31,13 +32,17 @@
     <%= f.label :dni %><br />
     <%= f.text_field :dni %>
   </div>
-  <div class="field">
-    <%= f.label :direccion %><br />
-    <%= f.text_field :direccion %>
+  <div>
+   <%= f.label :sexo %><br />
+   <%= f.select :sexo, {femenino: 'femenino', masculino: 'masculino'}.collect{|k,v| [k, v]}%>
   </div>
   <div class="field">
     <%= f.label :fecha_nacimiento %><br />
-    <%= f.date_select :fecha_nacimiento %>
+    <%= f.date_select("fecha_nacimiento", :start_year => 1980 ) %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
   </div>
   <div class="field">
     <%= f.label :puesto %><br />
@@ -59,9 +64,7 @@
     <%= f.label :ciudad %><br />
     <%= f.text_field :ciudad %>
   </div>
-  <div>
-   <%= f.select :sexo, {femenino: 'femenino', masculino: 'masculino'}.collect{|k,v| [k, v]}%>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

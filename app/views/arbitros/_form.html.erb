@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= f.label :fecha_de_nacimiento %><br />
-    <%= f.date_select :fecha_de_nacimiento %>
+    <%= f.date_select("fecha_de_nacimiento", :start_year => 1920) %>
   </div>
   <div class="field">
     <%= f.label :telefono_fijo %><br />

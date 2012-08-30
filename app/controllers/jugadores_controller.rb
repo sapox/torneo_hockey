@@ -25,7 +25,8 @@ class JugadoresController < ApplicationController
   # GET /jugadores/new.json
   def new
     @jugador = Jugador.new
-
+    @clubes = Club.all
+    @equipos = Equipo.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @jugador }
@@ -35,13 +36,16 @@ class JugadoresController < ApplicationController
   # GET /jugadores/1/edit
   def edit
     @jugador = Jugador.find(params[:id])
+    @clubes = Club.all
+    @equipos = Equipo.all  
   end
 
   # POST /jugadores
   # POST /jugadores.json
   def create
     @jugador = Jugador.new(params[:jugador])
-
+    @clubes = Club.all
+    @equipos = Equipo.all
     respond_to do |format|
       if @jugador.save
         format.html { redirect_to @jugador, notice: 'Jugador was successfully created.' }
@@ -57,7 +61,8 @@ class JugadoresController < ApplicationController
   # PUT /jugadores/1.json
   def update
     @jugador = Jugador.find(params[:id])
-
+    @clubes = Club.all
+    @equipos = Equipo.all
     respond_to do |format|
       if @jugador.update_attributes(params[:jugador])
         format.html { redirect_to @jugador, notice: 'Jugador was successfully updated.' }
@@ -74,7 +79,8 @@ class JugadoresController < ApplicationController
   def destroy
     @jugador = Jugador.find(params[:id])
     @jugador.destroy
-
+    @clubes = Club.all
+    @equipos = Equipo.all
     respond_to do |format|
       format.html { redirect_to jugadores_url }
       format.json { head :no_content }

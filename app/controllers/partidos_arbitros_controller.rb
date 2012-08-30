@@ -25,6 +25,7 @@ class PartidosArbitrosController < ApplicationController
   # GET /partidos_arbitros/new.json
   def new
     @partido_arbitro = PartidoArbitro.new
+    @arbitros = Arbitro.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +36,15 @@ class PartidosArbitrosController < ApplicationController
   # GET /partidos_arbitros/1/edit
   def edit
     @partido_arbitro = PartidoArbitro.find(params[:id])
+    @arbitros = Arbitro.all  
   end
 
   # POST /partidos_arbitros
   # POST /partidos_arbitros.json
   def create
     @partido_arbitro = PartidoArbitro.new(params[:partido_arbitro])
-
+    @arbitros = Arbitro.all
+    
     respond_to do |format|
       if @partido_arbitro.save
         format.html { redirect_to @partido_arbitro, notice: 'Partido arbitro was successfully created.' }
@@ -57,7 +60,8 @@ class PartidosArbitrosController < ApplicationController
   # PUT /partidos_arbitros/1.json
   def update
     @partido_arbitro = PartidoArbitro.find(params[:id])
-
+    @arbitros = Arbitro.all
+    
     respond_to do |format|
       if @partido_arbitro.update_attributes(params[:partido_arbitro])
         format.html { redirect_to @partido_arbitro, notice: 'Partido arbitro was successfully updated.' }
@@ -74,7 +78,8 @@ class PartidosArbitrosController < ApplicationController
   def destroy
     @partido_arbitro = PartidoArbitro.find(params[:id])
     @partido_arbitro.destroy
-
+    @arbitros = Arbitro.all
+    
     respond_to do |format|
       format.html { redirect_to partidos_arbitros_url }
       format.json { head :no_content }

@@ -15,10 +15,7 @@
     <%= f.label :partido_id %><br />
     <%= f.number_field :partido_id %>
   </div>
-  <div class="field">
-    <%= f.label :arbitro_id %><br />
-    <%= f.number_field :arbitro_id %>
-  </div>
+  <%= f.select :arbitro_id, @arbitros.collect{|a| [ "#{a.nombre.to_s} #{a.apellido}", a.id]}%>
   <div class="field">
     <%= f.label :dni %><br />
     <%= f.text_field :dni %>
