@@ -59,9 +59,8 @@
     <%= f.label :ciudad %><br />
     <%= f.text_field :ciudad %>
   </div>
-  <div class="field">
-    <%= f.label :sexo %><br />
-    <%= f.text_field :sexo %>
+  <div>
+   <%= f.select :sexo, {femenino: 'femenino', masculino: 'masculino'}.collect{|k,v| [k, v]}%>
   </div>
   <div class="actions">
     <%= f.submit %>
