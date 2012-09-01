@@ -11,13 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :sexo %><br />
-    <%= f.text_field :sexo %>
+  <div>
+   <%= f.label :sexo %><br />
+   <%= f.select :sexo, {femenino: 'femenino', masculino: 'masculino'}.collect{|k,v| [k, v]}%>
   </div>
   <div class="field">
     <%= f.label :categoria %><br />
-    <%= f.text_field :categoria %>
+    <%= f.select :categoria, {mosquito: 'mosquito', DecimaDivision: 'DecimaDivision', NovenaDivision: 'NovenaDivision', OctavaDivision: 'OctavaDivision', SeptimaDivision: 'SeptimaDivision'}.collect{|k,v| [k, v]}%>
+  </div>
+  <div class="field">
+  	<%= f.label :nombre%><br />
+  	<%= f.text_field :nombre %>
   </div>
   <div class="field">
     <%= f.label :cantidad_de_victorias %><br />
