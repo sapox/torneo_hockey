@@ -10,10 +10,9 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :codigo_club_id %><br />
-    <%= f.number_field :codigo_club_id %>
+    <%= f.collection_select(:codigo_club_id, @clubes, :id, :nombre) %>
   </div>
   <div class="field">
     <%= f.label :empleado_del_cuerpo_tecnico_id %><br />
@@ -21,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :puesto %><br />
-    <%= f.text_field :puesto %>
+    <%= f.select :puesto, {Entrenador: 'entrenador', DirectorTecnico: 'DirectorTecnico', AsistTecnico: 'AsistTecnico', Kinesiologo: 'kinesiologo', PreparadorFisico: 'preparadorFisico', Medico: 'medico'}.collect{|k,v| [k, v]}%>
   </div>
   <div class="actions">
     <%= f.submit %>

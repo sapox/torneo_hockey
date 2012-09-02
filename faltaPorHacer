@@ -1,0 +1,41 @@
+1 - Terminar de implementar el modelo (fk, relaciones 2 -1, etc)
+
+Categorias: 
+
+Cat. Mosquito: (4 jugadores en cancha) 
+                4 y 5 años (2008-2007)
+10º Div. (4 jugadores en cancha)
+                6 y 7 años 2006-2005
+9º Div. (5 o 6 Jugadores en cancha)
+                8 y 9 años 2004-2003
+8º Div. (5 o 6 jugadores en cancha)
+                10 y 11 años 2002-2001
+7º Div. (7 o 8 jugadores en cancha)
+                12, 13 y 14 años 1998-1999-2000
+      
+                
+2 - validación de campos/mensajes de error y satisfactorios. -> aca andamos
+ - arbitros (listo)
+ - cancha (listo)
+ - club (problemas con la validation, creo q es porq no la hice por scaffold a la parte de nombre)
+ 		(validación de q sean letras lograda) 
+ - empleado del cuerpo tecnico (listo)
+ - equipo partido (listo)
+ - equipo y cuerpo tecnico (aca tambien tengo dramas, empiezo a descreer q sea el tema del scaffold)
+     (se le puede validar puesto, al q ademas hay q agregarle las diferentes opciones de puesto)
+    - director tecnico
+    - asistente tecnico
+    - entrenador
+    - preparador fisico
+    - kinesiologo
+    - medico
+    (listo)
+ - equipo (listo)
+ - jugador (listo)
+ - partido arbitro -> acá creo q estaria bueno ver la manera de q cuando se seleccione el arbitro salga el dni en el input, cosa de q el usuario verifique q es el mismo
+ - partido_arbitro y partidos (habría q ver nomas como validarlos)
+
+3 - usuarios y permisos 
+4 - pensar como será el home y como se navegará por la página
+5 - investigar como sacar "informes", ya sea en pdf o txt
+

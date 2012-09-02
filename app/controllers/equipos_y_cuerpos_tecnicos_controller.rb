@@ -14,6 +14,7 @@ class EquiposYCuerposTecnicosController < ApplicationController
   # GET /equipos_y_cuerpos_tecnicos/1.json
   def show
     @equipo_y_cuerpo_tecnico = EquipoYCuerpoTecnico.find(params[:id])
+    @clubes = Club.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +26,9 @@ class EquiposYCuerposTecnicosController < ApplicationController
   # GET /equipos_y_cuerpos_tecnicos/new.json
   def new
     @equipo_y_cuerpo_tecnico = EquipoYCuerpoTecnico.new
+    @clubes = Club.all
 
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @equipo_y_cuerpo_tecnico }
@@ -35,13 +38,17 @@ class EquiposYCuerposTecnicosController < ApplicationController
   # GET /equipos_y_cuerpos_tecnicos/1/edit
   def edit
     @equipo_y_cuerpo_tecnico = EquipoYCuerpoTecnico.find(params[:id])
+    @clubes = Club.all
+
   end
 
   # POST /equipos_y_cuerpos_tecnicos
   # POST /equipos_y_cuerpos_tecnicos.json
   def create
     @equipo_y_cuerpo_tecnico = EquipoYCuerpoTecnico.new(params[:equipo_y_cuerpo_tecnico])
+    @clubes = Club.all
 
+      
     respond_to do |format|
       if @equipo_y_cuerpo_tecnico.save
         format.html { redirect_to @equipo_y_cuerpo_tecnico, notice: 'Equipo y cuerpo tecnico was successfully created.' }
@@ -57,7 +64,9 @@ class EquiposYCuerposTecnicosController < ApplicationController
   # PUT /equipos_y_cuerpos_tecnicos/1.json
   def update
     @equipo_y_cuerpo_tecnico = EquipoYCuerpoTecnico.find(params[:id])
+    @clubes = Club.all
 
+    
     respond_to do |format|
       if @equipo_y_cuerpo_tecnico.update_attributes(params[:equipo_y_cuerpo_tecnico])
         format.html { redirect_to @equipo_y_cuerpo_tecnico, notice: 'Equipo y cuerpo tecnico was successfully updated.' }
@@ -74,7 +83,9 @@ class EquiposYCuerposTecnicosController < ApplicationController
   def destroy
     @equipo_y_cuerpo_tecnico = EquipoYCuerpoTecnico.find(params[:id])
     @equipo_y_cuerpo_tecnico.destroy
-
+    @clubes = Club.all
+   
+    
     respond_to do |format|
       format.html { redirect_to equipos_y_cuerpos_tecnicos_url }
       format.json { head :no_content }
