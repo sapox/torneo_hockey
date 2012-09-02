@@ -1,6 +1,7 @@
 <h1>Listing clubes</h1>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Nombre</th>
     <th></th>
@@ -9,6 +10,7 @@
   </tr>
 
 <% @clubes.each do |club| %>
+  <tbody>
   <tr>
     <td><%= club.nombre %></td>
     <td><%= link_to 'Show', club %></td>
@@ -16,6 +18,8 @@
     <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
+</thead>
 </table>
 
 <br />

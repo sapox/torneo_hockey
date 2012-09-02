@@ -1,6 +1,7 @@
 <h1>Listing equipos</h1>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Sexo</th>
     <th>Categoria</th>
@@ -13,6 +14,7 @@
   </tr>
 
 <% @equipos.each do |equipo| %>
+  <tbody>
   <tr>
     <td><%= equipo.sexo %></td>
     <td><%= equipo.categoria %></td>
@@ -24,6 +26,8 @@
     <td><%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
+</thead>
 </table>
 
 <br />

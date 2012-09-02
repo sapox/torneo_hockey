@@ -1,6 +1,7 @@
 <h1>Listing arbitros</h1>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Nombre</th>
     <th>Apellido</th>
@@ -14,8 +15,9 @@
     <th></th>
     <th></th>
   </tr>
-
+  
 <% @arbitros.each do |arbitro| %>
+  <tbody>
   <tr>
     <td><%= arbitro.nombre %></td>
     <td><%= arbitro.apellido %></td>
@@ -30,6 +32,8 @@
     <td><%= link_to 'Destroy', arbitro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
+</thead>
 </table>
 
 <br />

@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TorneoHockey</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Torneo de Hockey</title>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <link rel="shortcut icon" href="/favicon.ico" />
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Torneo</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><%= link_to "jugadores", jugadores_path %></li>
+      <li><%= link_to "equipos", equipos_path %></li>
+      <li><%= link_to "clubes", clubes_path %></li>
+      <li><%= link_to "canchas", canchas_path %></li>
+      <li><%= link_to "partidos", partidos_path %></li>
+      <li><%= link_to "arbitros", arbitros_path %></li>
+    </ul>
+  </div>
+</div>
 <%= yield %>
-
 </body>
 </html>

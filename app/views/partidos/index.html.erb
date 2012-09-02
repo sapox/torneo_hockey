@@ -1,6 +1,7 @@
 <h1>Listing partidos</h1>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Cancha</th>
     <th>Fecha</th>
@@ -11,6 +12,7 @@
   </tr>
 
 <% @partidos.each do |partido| %>
+  <tbody>
   <tr>
     <td><%= partido.cancha_id %></td>
     <td><%= partido.fecha %></td>
@@ -20,6 +22,8 @@
     <td><%= link_to 'Destroy', partido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
+</thead>
 </table>
 
 <br />

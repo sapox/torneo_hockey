@@ -1,6 +1,7 @@
 <h1>Listing canchas</h1>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Nombre</th>
     <th>Pais</th>
@@ -14,6 +15,7 @@
   </tr>
 
 <% @canchas.each do |cancha| %>
+  <tbody>
   <tr>
     <td><%= cancha.nombre %></td>
     <td><%= cancha.pais %></td>
@@ -26,6 +28,8 @@
     <td><%= link_to 'Destroy', cancha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+</tbody>
+</thead>
 </table>
 
 <br />
