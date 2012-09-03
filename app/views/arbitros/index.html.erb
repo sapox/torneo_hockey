@@ -27,9 +27,9 @@
     <td><%= arbitro.telefono_celular %></td>
     <td><%= arbitro.email %></td>
     <td><%= arbitro.direccion %></td>
-    <td><%= link_to 'Show', arbitro %></td>
-    <td><%= link_to 'Edit', edit_arbitro_path(arbitro) %></td>
-    <td><%= link_to 'Destroy', arbitro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'mostrar', arbitro, :method => "get" %></td>
+    <td><%= button_to 'Editar', edit_arbitro_path(arbitro), :method => "get" %></td>
+    <td><%= button_to 'Eliminar', arbitro, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
   </tr>
 <% end %>
 </tbody>
@@ -38,4 +38,6 @@
 
 <br />
 
-<%= link_to 'New Arbitro', new_arbitro_path %>
+<div align="center">
+<%= button_to 'Nuevo Arbitro', new_arbitro_path, :method => "get" %>
+</div>
