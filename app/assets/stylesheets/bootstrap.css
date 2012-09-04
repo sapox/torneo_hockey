@@ -94,6 +94,15 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
+.container[role="main"] {
+            padding-bottom: 60px;
+        }
+        .bottombar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
 input[type="search"] {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -5571,7 +5580,6 @@ code {
 .affix {
   position: fixed;
 }
-
 
 .form-padding{
    padding: 30px;   
