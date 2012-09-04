@@ -44,7 +44,7 @@ class CanchasController < ApplicationController
 
     respond_to do |format|
       if @cancha.save
-        format.html { redirect_to @cancha, notice: 'Cancha was successfully created.' }
+        format.html { redirect_to @cancha, notice: 'La Cancha se ha creado correctamente.' }
         format.json { render json: @cancha, status: :created, location: @cancha }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class CanchasController < ApplicationController
 
     respond_to do |format|
       if @cancha.update_attributes(params[:cancha])
-        format.html { redirect_to @cancha, notice: 'Cancha was successfully updated.' }
+        format.html { redirect_to @cancha, notice: 'Cancha fue modificada correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

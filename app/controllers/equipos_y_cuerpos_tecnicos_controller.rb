@@ -51,7 +51,7 @@ class EquiposYCuerposTecnicosController < ApplicationController
       
     respond_to do |format|
       if @equipo_y_cuerpo_tecnico.save
-        format.html { redirect_to @equipo_y_cuerpo_tecnico, notice: 'Equipo y cuerpo tecnico was successfully created.' }
+        format.html { redirect_to @equipo_y_cuerpo_tecnico, notice: 'Equipo y cuerpo tecnico se ha creado correctamente.' }
         format.json { render json: @equipo_y_cuerpo_tecnico, status: :created, location: @equipo_y_cuerpo_tecnico }
       else
         format.html { render action: "new" }
@@ -69,7 +69,7 @@ class EquiposYCuerposTecnicosController < ApplicationController
     
     respond_to do |format|
       if @equipo_y_cuerpo_tecnico.update_attributes(params[:equipo_y_cuerpo_tecnico])
-        format.html { redirect_to @equipo_y_cuerpo_tecnico, notice: 'Equipo y cuerpo tecnico was successfully updated.' }
+        format.html { redirect_to @equipo_y_cuerpo_tecnico, notice: 'Equipo y cuerpo tecnico fue modificado adecuadamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
