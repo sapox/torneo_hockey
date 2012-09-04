@@ -1,5 +1,6 @@
+<body>
 <p id="notice"><%= notice %></p>
-
+<div id="container">
 <p>
   <b>Nombre:</b>
   <%= @cancha.nombre %>
@@ -29,7 +30,8 @@
   <b>Capacidad publico:</b>
   <%= @cancha.capacidad_publico %>
 </p>
+</div>
 
-
-<%= link_to 'Edit', edit_cancha_path(@cancha) %> |
-<%= link_to 'Back', canchas_path %>
+<%= link_to 'Editar', edit_cancha_path(@cancha) %> |
+<%= link_to 'Volver', canchas_path %>
+</body>
