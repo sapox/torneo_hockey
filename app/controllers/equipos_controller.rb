@@ -80,4 +80,13 @@ class EquiposController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def listado_categoria
+    @equipos_categorias = {}
+    @categorias = %W(mosquito DecimaDivision NovenaDivision OctavaDivision SeptimaDivision)
+    @categorias.each do |c|
+      @equipos_categorias[c.to_sym] = Equipo.where(categoria: c)
+    end
+  end
+
 end

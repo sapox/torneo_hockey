@@ -1,0 +1,40 @@
+<h1>Listado por categorias</h1>
+<% @equipos_categorias.each do |categoria, equipos|%>
+  <h2><%= categoria%></h2>
+  <% if equipos.blank? %>
+    No existen equipos para esta categoría
+  <% else %>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Sexo</th>
+        <th>Categoria</th>
+        <th>Cantidad de victorias</th>
+        <th>Cantidad de derrotas</th>
+        <th>Cantidad de empates</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% equipos.each do |equipo| %>
+      <tbody>
+      <tr>
+        <td><%= equipo.sexo %></td>
+        <td><%= equipo.categoria %></td>
+        <td><%= equipo.cantidad_de_victorias %></td>
+        <td><%= equipo.cantidad_de_derrotas %></td>
+        <td><%= equipo.cantidad_de_empates %></td>
+        <td><%= link_to 'Show', equipo %></td>
+        <td><%= link_to 'Edit', edit_equipo_path(equipo) %></td>
+        <td><%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+    </thead>
+    </table>
+  <% end %>
+<% end %>
+  <br />
+
+<%= link_to 'Volver', equipos_path %>

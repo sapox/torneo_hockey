@@ -7,7 +7,11 @@ TorneoHockey::Application.routes.draw do
 
   resources :partidos_arbitros
 
-  resources :equipos
+  resources :equipos do
+    collection do
+      get :listado_categoria
+    end
+  end
 
   resources :empleados_del_cuerpo_tecnico
 
