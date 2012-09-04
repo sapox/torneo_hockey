@@ -25,6 +25,29 @@
   <%= @equipo.cantidad_de_empates %>
 </p>
 
+<p>
+  <b>Cuerpo Técnico:</b>
+  <table>
+    <th>Apellido</th>
+    <th>Nombre </th>
+    <th>Dirección</th>
+    <th>DNI</th>
+    <th>E-mail</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Celular</th>
+    <th>Teléfono</th>
 
+    <% @equipo.empleados_del_cuerpo_tecnico.each do |e| %>
+      <td><%= e.apellido%></td>
+      <td><%= e.nombre%></td>
+      <td><%= e.direccion%></td>
+      <td><%= e.dni%></td>
+      <td><%= e.email%></td>
+      <td><%= e.fecha_nacimiento%></td>
+      <td><%= e.telefono_celular%></td>
+      <td><%= e.telefono_fijo%></td>
+    <% end %>
+  </table>
+</p>
 <%= link_to 'Edit', edit_equipo_path(@equipo) %> |
 <%= link_to 'Back', equipos_path %>
