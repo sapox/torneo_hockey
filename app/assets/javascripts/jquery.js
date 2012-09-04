@@ -9299,3 +9299,12 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }
 
 })( window );
+$(function() {
+	  // Setup drop down menu
+	  $('.dropdown-toggle').dropdown();
+	 
+	  // Fix input element click problem
+	  $('.dropdown input, .dropdown label').click(function(e) {
+	    e.stopPropagation();
+	  });
+	});
