@@ -44,7 +44,7 @@ class ArbitrosController < ApplicationController
 
     respond_to do |format|
       if @arbitro.save
-        format.html { redirect_to @arbitro, notice: 'Arbitro was successfully created.' }
+        format.html { redirect_to @arbitro, notice: 'El Arbitro se ha creado con exito.' }
         format.json { render json: @arbitro, status: :created, location: @arbitro }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class ArbitrosController < ApplicationController
 
     respond_to do |format|
       if @arbitro.update_attributes(params[:arbitro])
-        format.html { redirect_to @arbitro, notice: 'Arbitro was successfully updated.' }
+        format.html { redirect_to @arbitro, notice: 'El Arbitro se ha modificado correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

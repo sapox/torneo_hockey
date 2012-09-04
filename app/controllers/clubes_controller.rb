@@ -44,7 +44,7 @@ class ClubesController < ApplicationController
 
     respond_to do |format|
       if @club.save
-        format.html { redirect_to @club, notice: 'Club was successfully created.' }
+        format.html { redirect_to @club, notice: 'El Club se ha creado correctamente.' }
         format.json { render json: @club, status: :created, location: @club }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class ClubesController < ApplicationController
 
     respond_to do |format|
       if @club.update_attributes(params[:club])
-        format.html { redirect_to @club, notice: 'Club was successfully updated.' }
+        format.html { redirect_to @club, notice: 'Club fue modificado correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

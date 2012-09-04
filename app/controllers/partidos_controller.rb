@@ -46,7 +46,7 @@ class PartidosController < ApplicationController
 
     respond_to do |format|
       if @partido.save
-        format.html { redirect_to @partido, notice: 'Partido was successfully created.' }
+        format.html { redirect_to @partido, notice: 'Partido fue creado con exito.' }
         format.json { render json: @partido, status: :created, location: @partido }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class PartidosController < ApplicationController
     @canchas = Cancha.all
     respond_to do |format|
       if @partido.update_attributes(params[:partido])
-        format.html { redirect_to @partido, notice: 'Partido was successfully updated.' }
+        format.html { redirect_to @partido, notice: 'Partido fue modificado con exito.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

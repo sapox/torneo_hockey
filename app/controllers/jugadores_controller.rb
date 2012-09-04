@@ -48,7 +48,7 @@ class JugadoresController < ApplicationController
     @equipos = Equipo.all
     respond_to do |format|
       if @jugador.save
-        format.html { redirect_to @jugador, notice: 'Jugador was successfully created.' }
+        format.html { redirect_to @jugador, notice: 'Jugador se ha creado correctamente.' }
         format.json { render json: @jugador, status: :created, location: @jugador }
       else
         format.html { render action: "new" }
@@ -65,7 +65,7 @@ class JugadoresController < ApplicationController
     @equipos = Equipo.all
     respond_to do |format|
       if @jugador.update_attributes(params[:jugador])
-        format.html { redirect_to @jugador, notice: 'Jugador was successfully updated.' }
+        format.html { redirect_to @jugador, notice: 'Jugador fue actualizado adecuadamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

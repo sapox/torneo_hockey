@@ -1,6 +1,6 @@
-<h1>Listing jugadores</h1>
+<h1>Lista de jugadores</h1>
 
-<table class="table">
+<table class="table table-striped">
   <thead>
   <tr>
     <th>Codigo club</th>
@@ -37,9 +37,9 @@
     <td><%= jugador.provincia %></td>
     <td><%= jugador.ciudad %></td>
     <td><%= jugador.sexo %></td>
-    <td><%= link_to 'Show', jugador %></td>
-    <td><%= link_to 'Edit', edit_jugador_path(jugador) %></td>
-    <td><%= link_to 'Destroy', jugador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'mostrar', jugador %></td>
+    <td><%= link_to 'editar', edit_jugador_path(jugador) %></td>
+    <td><%= link_to 'Eliminar', jugador, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
   </tr>
 <% end %>
 </tbody>
@@ -48,4 +48,6 @@
 
 <br />
 
-<%= link_to 'New Jugador', new_jugador_path %>
+<div align="center">
+<%= button_to 'Nuevo Jugador', new_jugador_path, :method => "get" %>
+</div>

@@ -44,7 +44,7 @@ class EmpleadosDelCuerpoTecnicoController < ApplicationController
 
     respond_to do |format|
       if @empleado_del_cuerpo_tecnico.save
-        format.html { redirect_to @empleado_del_cuerpo_tecnico, notice: 'Empleado del cuerpo tecnico was successfully created.' }
+        format.html { redirect_to @empleado_del_cuerpo_tecnico, notice: 'Empleado del cuerpo tecnico se ha creado correctamente.' }
         format.json { render json: @empleado_del_cuerpo_tecnico, status: :created, location: @empleado_del_cuerpo_tecnico }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class EmpleadosDelCuerpoTecnicoController < ApplicationController
 
     respond_to do |format|
       if @empleado_del_cuerpo_tecnico.update_attributes(params[:empleado_del_cuerpo_tecnico])
-        format.html { redirect_to @empleado_del_cuerpo_tecnico, notice: 'Empleado del cuerpo tecnico was successfully updated.' }
+        format.html { redirect_to @empleado_del_cuerpo_tecnico, notice: 'Empleado del cuerpo tecnico fue modificado correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
