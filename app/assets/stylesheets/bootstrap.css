@@ -5571,3 +5571,8 @@ code {
 .affix {
   position: fixed;
 }
+
+
+.form-padding{
+   padding: 30px;   
+ }
