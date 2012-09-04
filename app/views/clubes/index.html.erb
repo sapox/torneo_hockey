@@ -1,6 +1,6 @@
-<h1>Listing clubes</h1>
+<h1>Lista de clubes</h1>
 
-<table class="table">
+<table class="table table-striped">
   <thead>
   <tr>
     <th>Nombre</th>
@@ -13,9 +13,9 @@
   <tbody>
   <tr>
     <td><%= club.nombre %></td>
-    <td><%= link_to 'Show', club %></td>
-    <td><%= link_to 'Edit', edit_club_path(club) %></td>
-    <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Mostrar', club, :method => "get" %></td>
+    <td><%= button_to 'Editar', edit_club_path(club), :method => "get" %></td>
+    <td><%= button_to 'Eliminar', club, method: :delete, data: { confirm: 'Estas seguro?' }%></td>
   </tr>
 <% end %>
 </tbody>
@@ -24,4 +24,6 @@
 
 <br />
 
-<%= link_to 'New Club', new_club_path %>
+<div align="center">
+<%= button_to 'Nuevo Club', new_club_path, :method => "get" %>
+</div>

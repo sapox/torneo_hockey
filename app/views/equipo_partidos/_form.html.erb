@@ -1,7 +1,7 @@
 <%= form_for(@equipo_partido) do |f| %>
   <% if @equipo_partido.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@equipo_partido.errors.count, "error") %> prohibited this equipo_partido from being saved:</h2>
+      <h2><%= pluralize(@equipo_partido.errors.count, "error") %> Corregir primero los siguientes campos:</h2>
 
       <ul>
       <% @equipo_partido.errors.full_messages.each do |msg| %>
