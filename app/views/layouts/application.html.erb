@@ -2,9 +2,11 @@
 <html>
 <head>
   <title>Torneo de Hockey</title>
-  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap", :media => "all" %>
   <link rel="shortcut icon" href="/favicon.ico" />
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "bootstrap.min" %>
+  <%= javascript_include_tag "jquery" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,13 +14,29 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Torneo de Hockey</a>
     <ul class="nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="http://0.0.0.0:3000/">home</a></li>
       <li><%= link_to "jugadores", jugadores_path %></li>
       <li><%= link_to "equipos", equipos_path %></li>
       <li><%= link_to "clubes", clubes_path %></li>
       <li><%= link_to "canchas", canchas_path %></li>
       <li><%= link_to "partidos", partidos_path %></li>
       <li><%= link_to "arbitros", arbitros_path %></li>
+      <!-- login  -->
+      <li class="dropdown" id="menu1">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+               Login
+                <b class="caret"></b>
+             </a>
+             <div class="dropdown-menu">
+               <form style="margin: 0px" accept-charset="UTF-8" action="/sessions" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4L/A2ZMYkhTD3IiNDMTuB/fhPRvyCNGEsaZocUUpw40=" /></div>
+                 <fieldset class='textbox' style="padding:10px">
+                   <input style="margin-top: 8px" type="text" placeholder="Username" />
+                   <input style="margin-top: 8px" type="password" placeholder="Passsword" />
+                   <input class="btn-primary" name="commit" type="submit" value="Log In" />
+                 </fieldset>
+               </form>
+             </div>
+           </li>
     </ul>
   </div>
 </div>
