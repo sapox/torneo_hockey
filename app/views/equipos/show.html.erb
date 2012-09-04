@@ -26,26 +26,63 @@
 </p>
 
 <p>
+  <b>Jugadores</b>
+  <table>
+    <tr>
+      <th>Apellido</th>
+      <th>Nombre </th>
+      <th>Dirección</th>
+      <th>Ciudad</th>
+      <th>Provincia</th>
+      <th>DNI</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Celular</th>
+      <th>Teléfono</th>
+      <th>Sexo</th>
+    </tr>
+
+    <% @equipo.jugadores.each do |j| %>
+      <tr>
+        <td><%= j.apellido%></td>
+        <td><%= j.nombre%></td>
+        <td><%= j.direccion%></td>
+        <td><%= j.ciudad %></td>
+        <td><%= j.provincia %></td>
+        <td><%= j.dni%></td>
+        <td><%= j.fecha_nacimiento%></td>
+        <td><%= j.telefono_celular%></td>
+        <td><%= j.telefono_fijo%></td>
+        <td><%= j.sexo%></td>
+      </tr>
+    <% end %>
+  </table>
+</p>
+
+<p>
   <b>Cuerpo Técnico:</b>
   <table>
-    <th>Apellido</th>
-    <th>Nombre </th>
-    <th>Dirección</th>
-    <th>DNI</th>
-    <th>E-mail</th>
-    <th>Fecha de Nacimiento</th>
-    <th>Celular</th>
-    <th>Teléfono</th>
+    <tr>
+      <th>Apellido</th>
+      <th>Nombre </th>
+      <th>Dirección</th>
+      <th>DNI</th>
+      <th>E-mail</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Celular</th>
+      <th>Teléfono</th>
+    </tr>
 
     <% @equipo.empleados_del_cuerpo_tecnico.each do |e| %>
-      <td><%= e.apellido%></td>
-      <td><%= e.nombre%></td>
-      <td><%= e.direccion%></td>
-      <td><%= e.dni%></td>
-      <td><%= e.email%></td>
-      <td><%= e.fecha_nacimiento%></td>
-      <td><%= e.telefono_celular%></td>
-      <td><%= e.telefono_fijo%></td>
+      <tr>
+        <td><%= e.apellido%></td>
+        <td><%= e.nombre%></td>
+        <td><%= e.direccion%></td>
+        <td><%= e.dni%></td>
+        <td><%= e.email%></td>
+        <td><%= e.fecha_nacimiento%></td>
+        <td><%= e.telefono_celular%></td>
+        <td><%= e.telefono_fijo%></td>
+      </tr>
     <% end %>
   </table>
 </p>
