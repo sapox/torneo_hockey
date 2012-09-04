@@ -21,8 +21,16 @@
       <li><%= link_to "canchas", canchas_path %></li>
       <li><%= link_to "partidos", partidos_path %></li>
       <li><%= link_to "arbitros", arbitros_path %></li>
-      <!-- login  -->
-      <li class="dropdown" id="menu1">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.email %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path(current_user), method: :delete%></li>
+      <% else%>
+        <% if admin_signed_in? %>
+          <li><%= link_to current_admin.email %></li>
+          <li><%= link_to 'Log out', destroy_admin_session_path(current_admin), method: :delete%></li>
+        <% else %>
+          <!-- login  -->
+          <li class="dropdown" id="menu1">
              <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
                Login
                 <b class="caret"></b>
@@ -37,6 +45,8 @@
                 </form>
              </div>
            </li>
+          <% end%>
+      <% end %>
     </ul>
   </div>
 </div>
