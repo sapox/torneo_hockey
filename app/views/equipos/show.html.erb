@@ -27,7 +27,8 @@
 
 <p>
   <b>Jugadores</b>
-  <table>
+  <table class="table table-striped">
+  	<thead>
     <tr>
       <th>Apellido</th>
       <th>Nombre </th>
@@ -42,6 +43,7 @@
     </tr>
 
     <% @equipo.jugadores.each do |j| %>
+      <tbody>
       <tr>
         <td><%= j.apellido%></td>
         <td><%= j.nombre%></td>
@@ -55,12 +57,15 @@
         <td><%= j.sexo%></td>
       </tr>
     <% end %>
+    </tbody>
+   </thead>
   </table>
 </p>
 
 <p>
   <b>Cuerpo Técnico:</b>
-  <table>
+  <table class="table table-striped">
+    <thead>
     <tr>
       <th>Apellido</th>
       <th>Nombre </th>
@@ -73,6 +78,7 @@
     </tr>
 
     <% @equipo.empleados_del_cuerpo_tecnico.each do |e| %>
+      <tbody>
       <tr>
         <td><%= e.apellido%></td>
         <td><%= e.nombre%></td>
@@ -84,7 +90,9 @@
         <td><%= e.telefono_fijo%></td>
       </tr>
     <% end %>
+    </tbody>
+  </thead>
   </table>
 </p>
-<%= link_to 'Edit', edit_equipo_path(@equipo) %> |
-<%= link_to 'Back', equipos_path %>
+<%= link_to 'Editar', edit_equipo_path(@equipo) %> |
+<%= link_to 'volver', equipos_path %>

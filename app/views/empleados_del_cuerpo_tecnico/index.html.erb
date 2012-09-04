@@ -1,6 +1,7 @@
-<h1>Listing empleados_del_cuerpo_tecnico</h1>
+<h1>Lista de empleados del cuerpo tecnico</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Nombre</th>
     <th>Apellido</th>
@@ -16,6 +17,7 @@
   </tr>
 
 <% @empleados_del_cuerpo_tecnico.each do |empleado_del_cuerpo_tecnico| %>
+  <tbody>
   <tr>
     <td><%= empleado_del_cuerpo_tecnico.nombre %></td>
     <td><%= empleado_del_cuerpo_tecnico.apellido %></td>
@@ -25,13 +27,18 @@
     <td><%= empleado_del_cuerpo_tecnico.telefono_celular %></td>
     <td><%= empleado_del_cuerpo_tecnico.email %></td>
     <td><%= empleado_del_cuerpo_tecnico.direccion %></td>
-    <td><%= link_to 'Show', empleado_del_cuerpo_tecnico %></td>
-    <td><%= link_to 'Edit', edit_empleado_del_cuerpo_tecnico_path(empleado_del_cuerpo_tecnico) %></td>
-    <td><%= link_to 'Destroy', empleado_del_cuerpo_tecnico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Mostrar', empleado_del_cuerpo_tecnico, :method => "get" %></td>
+    <td><%= button_to 'Editar', edit_empleado_del_cuerpo_tecnico_path(empleado_del_cuerpo_tecnico), :method => "get" %></td>
+    <td><%= button_to 'Eliminar', empleado_del_cuerpo_tecnico, method: :delete, data: { confirm: 'Estas seguro?' }%></td>
   </tr>
 <% end %>
+</tbody>
+</thead>
 </table>
 
 <br />
 
-<%= link_to 'New Empleado del cuerpo tecnico', new_empleado_del_cuerpo_tecnico_path %>
+<div align="center">
+<%= button_to 'Nuevo Empleado del cuerpo tecnico', new_empleado_del_cuerpo_tecnico_path, :method => "get" %>
+</div>
+
