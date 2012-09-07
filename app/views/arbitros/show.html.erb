@@ -42,4 +42,5 @@
 
 
 <%= link_to 'Editar', edit_arbitro_path(@arbitro) %> |
-<%= link_to 'Volver', arbitros_path %>
+<%= link_to 'Volver', arbitros_path %> |
+<%= link_to 'Imprimir', :action => "show", :id => @arbitro, :format => :pdf %>

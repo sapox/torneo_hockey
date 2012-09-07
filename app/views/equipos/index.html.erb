@@ -21,9 +21,9 @@
     <td><%= equipo.cantidad_de_victorias %></td>
     <td><%= equipo.cantidad_de_derrotas %></td>
     <td><%= equipo.cantidad_de_empates %></td>
-    <td><%= link_to 'Show', equipo %></td>
-    <td><%= link_to 'Edit', edit_equipo_path(equipo) %></td>
-    <td><%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'mostrar', equipo %></td>
+    <td><%= link_to 'Editar', edit_equipo_path(equipo) %></td>
+    <td><%= link_to 'eliminar', equipo, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
   </tr>
 <% end %>
 </tbody>

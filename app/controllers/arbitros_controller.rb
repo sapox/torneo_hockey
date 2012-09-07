@@ -18,6 +18,7 @@ class ArbitrosController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @arbitro }
+      format.pdf { render :layout => false }
     end
   end
 
@@ -81,3 +82,4 @@ class ArbitrosController < ApplicationController
     end
   end
 end
+

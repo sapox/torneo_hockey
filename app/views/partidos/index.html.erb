@@ -1,6 +1,6 @@
-<h1>Listing partidos</h1>
+<h1>Lista de partidos</h1>
 
-<table class="table">
+<table class="table table-striped">
   <thead>
   <tr>
     <th>Cancha</th>
@@ -19,9 +19,9 @@
     <td><%#= partido.equipos.first %></td>
     <td><%#= partido.equipos.last %></td>
     <td><%= partido.fecha_encuentro.strftime("%d - %m - %Y") %></td>
-    <td><%= link_to 'Show', partido %></td>
-    <td><%= link_to 'Edit', edit_partido_path(partido) %></td>
-    <td><%= link_to 'Destroy', partido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'mostrar', partido %></td>
+    <td><%= link_to 'Editar', edit_partido_path(partido) %></td>
+    <td><%= link_to 'Eliminar', partido, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
   </tr>
 <% end %>
 </tbody>
@@ -30,4 +30,4 @@
 
 <br />
 
-<%= link_to 'New Partido', new_partido_path %>
+<%= link_to 'Nuevo Partido', new_partido_path %>
